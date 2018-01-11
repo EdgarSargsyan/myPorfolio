@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+body {
+  height: 100%;
+  background-color: #000000;
+  font-family: "Open Sans", sans-serif
+}
+
+button:focus, input:focus{
+	outline: none;
+}
+button:hover{
+  cursor: pointer;
+}
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 90px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgb(14, 13, 13); /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  border-right: 2px solid rgb(0, 0, 0);
+  box-shadow: inset 0 0 50px #000000;
+}
+.sidenav div.container{
+  margin-top:90px;
+}
+/* The navigation menu links */
+.sidenav a {
+  padding:15px 0px;
+  text-align: center;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.5s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover{
+  color: #0085eb;
+}
+.links{
+  padding-top:80px;
+}
+.links a{
+  padding: 10px;
+  font-size: 20px;
+}
+.sidenavMob div{
+  display: inline-block;
+}
+#singUpBtn, #singInBtn{
+  box-shadow: inset 0 0 50px #000000;
+  border:none;
+  border-radius: 10px;
+}
+#singUpBtn:hover, #singInBtn:hover {
+  box-shadow: 0px 0px 50px rgba(1, 141, 255, 0.897) ;
+}
+.login_reg{
+  display: inline-block;
+  position: fixed;
+  top:10px;
+  right: 20px;
+}
+#user_info{
+  position: absolute;
+  top:2px;
+  left:20%;
+  font-size: 20px;
+  color:red;
+}
+#regForm{
+	width: 30%;
+  padding: 50px;
+  text-align: center;
+	box-shadow: inset 0px 0px 80px rgba(59, 160, 241, 0.897) ;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.89);
+	display:none;
+	position: absolute;
+	z-index: 2;
+	top:80px;
+	right: 50px;
+}
+#loginForm{
+	width: 30%;
+  padding: 50px;
+  text-align: center;
+	box-shadow: inset 0px 0px 80px rgba(59, 160, 241, 0.897) ;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.89);
+	display:none;
+	position: absolute;
+	z-index: 2;
+  top:80px;
+	right: 50px;
+}
+#loginForm input:focus, #regForm input:focus{
+	box-shadow: 0px 0px 50px rgba(74, 173, 255, 0.897) ;
+}
+#regForm button, #loginForm button{
+	height:50px;
+  width:150px;
+	font-size: 22px;
+	color:white;
+	border:none;
+	margin:10px;
+	border-radius: 10px;
+  box-shadow: inset 0px 0px 80px rgb(0, 0, 0) ;
+}
+#regForm input, #loginForm input {
+	width: 100%;
+	height: 40px;
+	border-radius: 10px;
+	text-indent: 18px;
+	font-size: 18px;
+	margin-bottom: 20px;
+  transition: 0.2s;
+}
+#regForm input[name="gender"]{
+	width: 20px;
+	height: 20px;
+  margin: 10px;
+}
+#regForm #userEmail{
+  margin-bottom: 5px;
+}
+.gender_div{
+  font-size: 25px;
+  color: rgb(0, 132, 255);
+}
+
+#login , #send{
+	background-color: rgb(0, 132, 255);
+	width: 130px;
+	height: 50px;
+	font-size: 20px;
+}
+#login:hover, #send:hover{
+	box-shadow: 0px 0px 50px rgba(1, 141, 255, 0.897) ;
+}
+.close{
+	float: right;
+	margin-top: -30px;
+	margin-right: -25px;
+}
+.close img:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+#regErr, #logErr{
+  color:red;
+  font-size: 18px;
+	text-shadow: 0px 0px 50px rgb(255, 0, 0);
+}
+.loginError{
+  text-align: center;
+  color:darkred;
+}
+
+/* Style page content */
+main {
+  box-shadow: inset 0 0 50px #000000;
+  height: 785px;
+  margin-left: 90px; 
+}
+.homeContent{
+  height: 100%;
+}
+#c {
+  opacity:0.5;
+}
+canvas {
+  position:absolute;
+  z-index: -1;
+  top:0; left:0;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+
+
+
+.text-js{
+  opacity: 0;
+}
+.cursor{
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: rgb(0, 255, 200);
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate;
+}
+@keyframes flash{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.homeContent > div{
+  padding-top:200px;
+  padding-left: 50px;
+}
+.headline{
+  margin:5px;
+  font-size: 40px;
+  text-align: center;
+  color: #c0c0c0;
+  font-weight: bold;
+  text-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+.text-js{
+  transition:0.5s;
+}
+
+.text-js:hover{
+  color: #0085eb;
+}
+.skillsBg{
+  background-color: #0085eb;
+}
